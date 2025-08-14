@@ -15,7 +15,7 @@ namespace WaferHandlingHMI.ViewModels
             get => _facingLeft;
             set
             {
-                _facingLeft = value;;
+                _facingLeft = value;
             }
         }
 
