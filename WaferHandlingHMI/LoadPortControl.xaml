@@ -8,7 +8,7 @@
              d:DesignHeight="600" d:DesignWidth="200">
     <UserControl.Resources>
         <Style TargetType="Rectangle">
-            <Setter Property="Height" Value="20"/>
+            <Setter Property="Height" Value="2"/>
             <Setter Property="Margin" Value="5,2"/>
             <Setter Property="Stroke" Value="Black"/>
             <Setter Property="StrokeThickness" Value="1"/>
@@ -28,10 +28,13 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Content="{Binding LoadPortName, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
-        <ListBox Grid.Row="1">
+        <ListBox Grid.Row="1" ItemsSource="{Binding Slots}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Rectangle/>
+                    <Grid Height="6">
+                        <Rectangle Fill="{Binding FillColor}"/>
+                        <TextBlock Text="            " HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
