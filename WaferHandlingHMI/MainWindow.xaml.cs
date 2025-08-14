@@ -11,7 +11,7 @@ namespace WaferHandlingHMI
         private readonly LoadPortViewModel _loadPort1ViewModel;
         private readonly LoadPortViewModel _loadPort2ViewModel;
 
-        //private readonly RobotArmViewModel _robotArm;
+        private readonly RobotViewModel _robotArmViewModel;
 
         public MainWindow()
         {
@@ -23,7 +23,9 @@ namespace WaferHandlingHMI
             LP1Control.DataContext = _loadPort1ViewModel;
             LP2Control.DataContext = _loadPort2ViewModel;
 
-            //_robotArm = new RobotArmControl();
+            _robotArmViewModel = new RobotViewModel();
+
+            RobotControl.DataContext = _robotArmViewModel;
 
             _loadPort1ViewModel.SlotStateChanged += (slotNumber, isOccupied) =>
             {

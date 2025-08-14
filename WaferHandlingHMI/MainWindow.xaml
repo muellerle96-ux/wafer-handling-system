@@ -22,7 +22,7 @@
             
             <!--Add each component of the Wafer as a seperate Control-->
             <local:LoadPortControl Grid.Column="0" x:Name="LP1Control" LoadPortName="LP1"/>
-            <local:RobotArmControl Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <local:RobotArmControl Grid.Column="1" x:Name="RobotControl" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             <local:LoadPortControl Grid.Column="2" x:Name="LP2Control" LoadPortName="LP2"/>
 
         </Grid>
